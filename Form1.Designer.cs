@@ -45,6 +45,7 @@
             buttonSubtract = new Button();
             buttonAdd = new Button();
             textBox = new TextBox();
+            buttonBackspace = new Button();
             SuspendLayout();
             // 
             // button1
@@ -139,7 +140,7 @@
             // 
             // button0
             // 
-            button0.Location = new Point(12, 287);
+            button0.Location = new Point(12, 285);
             button0.Name = "button0";
             button0.Size = new Size(68, 65);
             button0.TabIndex = 9;
@@ -212,8 +213,18 @@
             textBox.Location = new Point(12, 12);
             textBox.Multiline = true;
             textBox.Name = "textBox";
-            textBox.Size = new Size(290, 56);
+            textBox.Size = new Size(216, 56);
             textBox.TabIndex = 16;
+            // 
+            // buttonBackspace
+            // 
+            buttonBackspace.Location = new Point(235, 12);
+            buttonBackspace.Name = "buttonBackspace";
+            buttonBackspace.Size = new Size(68, 56);
+            buttonBackspace.TabIndex = 17;
+            buttonBackspace.Text = "<";
+            buttonBackspace.UseVisualStyleBackColor = true;
+            buttonBackspace.Click += buttonBackspace_Click;
             // 
             // Calculator
             // 
@@ -221,6 +232,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(315, 363);
+            Controls.Add(buttonBackspace);
             Controls.Add(textBox);
             Controls.Add(buttonAdd);
             Controls.Add(buttonSubtract);
@@ -263,5 +275,6 @@
         private Button buttonSubtract;
         private Button buttonAdd;
         private TextBox textBox;
+        private Button buttonBackspace;
     }
 }
